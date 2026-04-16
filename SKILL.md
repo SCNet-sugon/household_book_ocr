@@ -1,7 +1,7 @@
 ---
 name: household_book_ocr
 description: 将图片中的文字、户口本信息识别并提取出来。本技能应在用户需要 OCR 识别图片中的文字，或识别户口本时使用。
-version: 1.0.2
+version: 1.0.3
 author: SCNet
 license: MIT
 tags:
@@ -11,7 +11,8 @@ tags:
   - 文字提取
 required_env_vars:
   - SCNET_API_KEY
-  - SCNET_API_BASE  # 可选，但有默认值
+optional_env_vars:
+  - SCNET_API_BASE
 primary_credential: SCNET_API_KEY
 dependencies:
   - python3
